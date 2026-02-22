@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import * as math from 'mathjs';
-import { MathTex } from '../components/MathTex';
 
 interface BranchInput {
     from: number;

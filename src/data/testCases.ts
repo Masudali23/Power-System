@@ -1,5 +1,7 @@
+import type { SystemData } from '../lib/solvers/types';
+
 // IEEE 3-Bus Example based on standard textbook problems
-export const IEEE3Bus = {
+export const IEEE3Bus: SystemData = {
     baseMVA: 100,
     buses: [
         { id: 1, type: 'slack', vMag: 1.05, vAng: 0, pGen: 0, qGen: 0, pLoad: 0, qLoad: 0 },
@@ -14,7 +16,7 @@ export const IEEE3Bus = {
 };
 
 // Simplified IEEE 14-bus test system
-export const IEEE14Bus = {
+export const IEEE14Bus: SystemData = {
     baseMVA: 100,
     buses: [
         { id: 1, type: 'slack', vMag: 1.06, vAng: 0, pGen: 0, qGen: 0, pLoad: 0, qLoad: 0 },

@@ -1,6 +1,6 @@
 import * as math from 'mathjs';
 import type { SystemData, IterationResult } from './types';
-import { buildYBus, cplx } from './YBus';
+import { buildYBus } from './YBus';
 
 export function runFDLF(system: SystemData, maxIter: number, tolerance: number): {
     iterations: IterationResult[];
@@ -12,7 +12,6 @@ export function runFDLF(system: SystemData, maxIter: number, tolerance: number):
     const baseMVA = system.baseMVA;
 
     // Find bus indices by type
-    const slackIdx = system.buses.findIndex(b => b.type === 'slack');
     const pqIndices: number[] = [];
     const pvIndices: number[] = [];
     const nonSlackIndices: number[] = [];
